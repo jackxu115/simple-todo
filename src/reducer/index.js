@@ -1,18 +1,6 @@
-const todos = (state = [], action) => {
-  console.log(state);
-  switch (action.type) {
-    case "ADD_TODO":
-      return [
-        ...state,
-        {
-          id: action.id,
-          complete: action.complete,
-          text: action.text
-        }
-      ];
-    default:
-      return state;
-  }
-};
+import { combineReducers } from 'redux';
+import todos from './todo';
 
-export default todos;
+export default combineReducers({
+  todos
+});

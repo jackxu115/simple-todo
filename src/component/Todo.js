@@ -1,5 +1,7 @@
 import React from "react";
 
 const Todo = ({ text }) => {
-  <li>{text}</li>;
+  return <li>{text}</li>;
 };
+
+export default Todo;

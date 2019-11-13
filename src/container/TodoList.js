@@ -1,6 +1,6 @@
-import React from "react";
-import Todo from "../component/Todo";
-import { connect } from "react-redux";
+import React from 'react';
+import Todo from '../component/Todo';
+import { connect } from 'react-redux';
 
 const TodoList = ({ todos }) => {
   return (
@@ -10,4 +10,8 @@ const TodoList = ({ todos }) => {
   );
 };
 
-export default connect()(TodoList);
+const mapStateToProps = state => ({
+  todos: state.todos
+});
+
+export default connect(mapStateToProps)(TodoList);

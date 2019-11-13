@@ -1,12 +1,12 @@
-import React from "react";
-import { addTodo } from "../action";
-import { connect } from "react-redux";
+import React from 'react';
+import { addTodo } from '../action';
+import { connect } from 'react-redux';
 
 const AddTodo = ({ dispatch }) => {
   let input;
   let onClick = e => {
-    if (input.value.trim() !== "") {
-      dispatch(addTodo(input.value.trim()));
+    if (input.value.trim() !== '') {
+      dispatch(addTodo(input.value));
     }
   };
   return (
