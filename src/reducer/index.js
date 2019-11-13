@@ -1,9 +1,15 @@
-const initialState = [];
-
-const todos = (state = initialState, action) => {
+const todos = (state = [], action) => {
+  console.log(state);
   switch (action.type) {
     case "ADD_TODO":
-      return Object.assign({}, state, { id: action.id, text: action.text });
+      return [
+        ...state,
+        {
+          id: action.id,
+          complete: action.complete,
+          text: action.text
+        }
+      ];
     default:
       return state;
   }
